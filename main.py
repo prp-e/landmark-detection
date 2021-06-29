@@ -6,11 +6,11 @@ mp_holistic = mp.solutions.holistic
 
 cam = cv2.VideoCapture(1) 
 
-while cam.isOpened():
+while True:
     _, frame = cam.read()
     cv2.imshow("Camera feed", frame)
 
-    if cv2.waitKey(0) & 0xff == ord('q'):
+    if cv2.waitKey(1) & 0xff == ord('q'):
         break 
 
 cam.release()
